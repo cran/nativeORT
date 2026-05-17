@@ -12,7 +12,7 @@
 #' @returns str - platform
 #' @export
 #'
-#' @examples ort_detect_os()
+#' @examples \dontrun{ort_detect_os()}
 ort_detect_os <- function(){
   os_name <- Sys.info()[['sysname']]
   arch <- R.version$arch
@@ -35,7 +35,7 @@ ort_detect_os <- function(){
 #' @returns where the install lives
 #' @export
 #'
-#' @examples ort_install_dir()
+#' @examples \dontrun{ort_install_dir()}
 ort_install_dir <- function(){
   tools::R_user_dir("nativeORT", which="data")
 }
@@ -45,7 +45,7 @@ ort_install_dir <- function(){
 #' @returns string where to download onnxruntime from
 #' @export
 #'
-#' @examples ort_binary_url()
+#' @examples \dontrun{ort_binary_url()}
 ort_binary_url <- function(){
   os <- ort_detect_os()
   base <- "https://github.com/microsoft/onnxruntime/releases/download"
@@ -57,7 +57,7 @@ ort_binary_url <- function(){
 #' @returns boolean for if you have onnx runtime or not
 #' @export
 #'
-#' @examples ort_is_installed()
+#' @examples \dontrun{ort_is_installed()}
 ort_is_installed <- function(){
   lib_file <- switch(ort_detect_os(),
                      "osx-arm64" = "libonnxruntime.dylib",
@@ -79,12 +79,7 @@ ort_is_installed <- function(){
 #' @returns invisible lib path
 #' @export
 #'
-#' @examples
-#' \donttest{
-#'   if(!ort_is_installed()){
-#'     ort_codesign(file.path(ort_install_dir(), "lib"))
-#'   }
-#' }
+#' @examples \dontrun{ort_codesign(file.path(ort_install_dir(), "lib"))}
 ort_codesign <- function(lib_dir) {
   dylibs <- list.files(
     lib_dir,
@@ -113,11 +108,7 @@ ort_codesign <- function(lib_dir) {
 #' @returns invisible dest_dir
 #' @export
 #'
-#' @examples
-#' \donttest{
-#' if (!ort_is_installed()){
-#'   ort_download(ort_binary_url(), ort_install_dir())}
-#' }
+#' @examples \dontrun{ort_download(ort_binary_url(), ort_install_dir())}
 ort_download <- function(url, dest_dir) {
   # download
   dir.create(dest_dir, recursive = TRUE, showWarnings= FALSE)
@@ -155,11 +146,7 @@ ort_download <- function(url, dest_dir) {
 #' @returns invisible where it was saved to
 #' @export
 #'
-#' @examples
-#' \donttest{
-#'   if(!ort_is_installed()){
-#'     ort_install()}
-#'   }
+#' @examples \dontrun{ort_install()}
 ort_install <- function() {
   # prevent re-installation
   if (ort_is_installed()) {

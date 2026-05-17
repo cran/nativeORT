@@ -18,8 +18,5 @@ invisible dest_dir
 ort_download
 }
 \examples{
-\donttest{
-if (!ort_is_installed()){
-  ort_download(ort_binary_url(), ort_install_dir())}
-}
+\dontrun{ort_download(ort_binary_url(), ort_install_dir())}
 }

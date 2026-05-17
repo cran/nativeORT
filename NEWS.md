@@ -1,3 +1,4 @@
-# nativeORT 0.1.2
+# nativeORT 1.0.1
 
-* Fixed CRAN Submission notes concerning documentation and testing.
+Fixed minor ifdef guard slip causing overloaded methods in the case where ONNX
+libraries need to be installed.

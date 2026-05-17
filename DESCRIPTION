@@ -1,7 +1,7 @@
 Package: nativeORT
 Type: Package
-Title: Native 'R' 'ONNX' Runtime
-Version: 0.1.2
+Title: Native R 'ONNX' Runtime
+Version: 1.0.1
 Authors@R: c(
     person(
       "Caleb", "Carr",
@@ -9,12 +9,7 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: Provides 'R' native 'ONNX' model inference without requiring 'Python', 'reticulate'
-  bindings, or 'TensorFlow'. This package directly binds the 'ONNX Runtime' C API via 'Rcpp', enabling
-  real-time inference for '.onnx' engines, all within 'R'. Standard CPU execution is supported as well 
-  as the 'CoreML' Execution Provider (CEP) for Apple Silicon, all without external bindings. This package
-  handles OS detection, linking 'ONNX' libraries, and inference. For more information about 'ONNX Runtime'
-  see <https://onnxruntime.ai/>.
+Description: Provides R native 'ONNX' model inference without requiring 'Python', 'reticulate' bindings, or 'TensorFlow'. This package directly binds the 'ONNX Runtime' C API via 'Rcpp', enabling real-time inference for '.onnx' engines, all within R. Standard CPU execution is supported as well as the 'CoreML' Execution Provider (CEP) for Apple Silicon, all without external bindings. This package handles OS detection, linking 'ONNX' libraries, and inference. For more information about 'ONNX Runtime' see <https://onnxruntime.ai/>.
 License: MIT + file LICENSE
 Language: en-US
 Encoding: UTF-8
@@ -27,8 +22,8 @@ VignetteBuilder: knitr
 URL: https://github.com/calebmcarr/nativeORT
 BugReports: https://github.com/calebmcarr/nativeORT/issues
 NeedsCompilation: yes
-Packaged: 2026-05-07 01:44:21 UTC; calebcarr
+Packaged: 2026-05-17 15:14:40 UTC; calebcarr
 Author: Caleb Carr [aut, cre]
 Maintainer: Caleb Carr <calebmcarr1@gmail.com>
 Repository: CRAN
-Date/Publication: 2026-05-12 19:20:08 UTC
+Date/Publication: 2026-05-17 22:40:11 UTC

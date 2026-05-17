@@ -18,10 +18,5 @@ invisible session
 print.ort_session
 }
 \examples{
-\donttest{
-  if (file.exists("model.onnx")) {
-    session <- ort_session("model.onnx")
-    print(session)
-  }
-}
+\dontrun{print(session)}
 }

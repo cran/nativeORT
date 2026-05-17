@@ -10,12 +10,7 @@
 #' @returns ORT session object
 #' @export
 #'
-#' @examples
-#' \donttest{
-#'   if (file.exists('./yolov11n.onnx')) {
-#'     ort_session('./yolov11n.onnx', 'detection')
-#'   }
-#' }
+#' @examples \dontrun{ort_session('./yolov8n.onnx', 'detection')}
 ort_session <- function(path,
                         type='detection',
                         provider="cpu",
@@ -74,15 +69,9 @@ ort_session <- function(path,
 #' @param ... extra params
 #'
 #' @returns invisible session
-#' @exportS3Method print ort_session
+#' @export
 #'
-#' @examples
-#' \donttest{
-#'   if (file.exists("model.onnx")) {
-#'     session <- ort_session("model.onnx")
-#'     print(session)
-#'   }
-#' }
+#' @examples \dontrun{print(session)}
 print.ort_session <- function(x, ...) {
   cat("nativeORT session\n")
   cat("  model: ", x$path, "\n")

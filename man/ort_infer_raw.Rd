@@ -18,11 +18,5 @@ ORT output
 ort_infer_raw
 }
 \examples{
-\donttest{
-  if (file.exists("model.onnx")) {
-    session <- ort_session("model.onnx")
-    input <- array(runif(1 * 3 * 256 * 256), dim = c(1L, 3L, 256L, 256L))
-    ort_infer_raw(session, input)
-  }
-}
+\dontrun{ort_infer_raw(session, input)}
 }
